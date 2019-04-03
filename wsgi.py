@@ -7,7 +7,8 @@ PRODUCTS = [
     { 'id': 1, 'name': 'Skello' },
     { 'id': 2, 'name': 'Socialive.tv' }
 ]
+
 @app.route('/api/v1/products')
 def products():
-    return jsonify (products)
+    return jsonify (PRODUCTS)
 
