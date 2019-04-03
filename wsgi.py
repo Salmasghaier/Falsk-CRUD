@@ -19,3 +19,18 @@ def hello():
 def products():
     return jsonify (PRODUCTS)
 
+
+@app.route('/api/v1/products/<int:id>')
+def product(id):
+
+    for product in PRODUCTS:
+        if product['id']==id:
+               return jsonify(product)
+    else:
+        return "",404
+
+
+
+
+
+
